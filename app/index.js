@@ -1,8 +1,22 @@
 import drop  from 'component/drop';
+import file  from 'component/file';
 import query from 'component/query';
 
-var el = query('.placeholder');
+var upload = query('.upload');
 
-drop(el, function(el) {
-  console.log(el);
+drop(upload, function(el) {
+  let img = file(el.items[0]);
+
+  console.log(img);
+
+  if (!img.is('image/*')) {
+      return alert('Only image uploads possible.');
+  }
+
+  img.toDataURL(function(err, str) {
+    if (err) throw err;
+
+    upload.classList.remove('empty');
+    upload.innerHTML = '<img src="' + str + '">';
+  });
 });
