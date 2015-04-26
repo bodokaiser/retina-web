@@ -1,0 +1,10 @@
+.thumbnail {
+    border-width: 3px;
+    border-style: dashed;
+}
+
+.placeholder {
+    font-size: 40px;
+    text-align: center;
+    padding: 150px 100px;
+}
