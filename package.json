@@ -7,9 +7,9 @@
     "description": "web app for retina system",
 
     "dependencies": {
-        "koa": "^0.19.1",
+        "roo": "^0.3.0",
         "duo": "^0.11.2",
-        "roo": "^0.3.0"
+        "duo-babel": "^5.2.0"
     }
 
 }
