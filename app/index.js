@@ -7,8 +7,6 @@ var upload = query('.upload');
 drop(upload, function(el) {
   let img = file(el.items[0]);
 
-  console.log(img);
-
   if (!img.is('image/*')) {
       return alert('Only image uploads possible.');
   }
