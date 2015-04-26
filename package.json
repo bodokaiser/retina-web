@@ -9,7 +9,8 @@
     "dependencies": {
         "roo": "^0.3.0",
         "duo": "^0.11.2",
-        "duo-babel": "^5.2.0"
+        "duo-babel": "^5.2.0",
+        "raw-body": "^1.3.4"
     }
 
 }

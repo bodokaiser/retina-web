@@ -1,6 +1,7 @@
-import drop  from 'component/drop';
-import file  from 'component/file';
-import query from 'component/query';
+import drop    from 'component/drop';
+import file    from 'component/file';
+import query   from 'component/query';
+import request from 'visionmedia/superagent';
 
 var upload = query('.upload');
 
@@ -16,5 +17,12 @@ drop(upload, function(el) {
 
     upload.classList.remove('empty');
     upload.innerHTML = '<img src="' + str + '">';
+
+    request.post('/upload')
+      .type(img.file.type)
+      .send(str)
+      .end(function(err) {
+        if (err) throw err;
+      });
   });
 });
