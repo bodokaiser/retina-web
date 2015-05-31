@@ -19,15 +19,15 @@ drop(upload, function(el) {
     upload.classList.remove('empty');
     upload.innerHTML = createImg(str);
 
-    request.post('/upload')
+    request.post('/images')
       .send({
-        image: str
+        input: str
       })
       .end(function(err, res) {
         if (err) throw err;
 
         result.classList.remove('empty');
-        result.innerHTML = createImg(res.body.image);
+        result.innerHTML = createImg(res.body.output);
       });
   });
 });
